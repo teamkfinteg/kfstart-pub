@@ -2,10 +2,7 @@ name: Kickstart Reporting Workflow
 on: [workflow_dispatch, push, pull_request]
 
 jobs:
-  call-create-github-release-workflow:
-    uses: Keyfactor/actions/.github/workflows/github-release.yml@main
-
-  call-dotnet-build-and-release-workflow:
-    uses: fiddlermikey/reportscripts/.github/workflows/basic.yml@main
+  call-report-script:
+    uses: teamkfinteg/reportscripts/.github/workflows/basic.yml@main
     secrets: 
       token: ${{ secrets.PRIVATE_REPO_TEST }}
