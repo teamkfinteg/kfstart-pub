@@ -4,5 +4,7 @@ on: [workflow_dispatch, push, pull_request]
 jobs:
   call-report-script:
     uses: teamkfinteg/reportscripts/.github/workflows/basic.yml@main
+    with:
+      orgname: teamkfinteg
     secrets: 
       token: ${{ secrets.PRIVATE_REPO_TEST }}
