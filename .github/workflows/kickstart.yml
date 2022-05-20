@@ -5,6 +5,6 @@ jobs:
   call-report-script:
     uses: teamkfinteg/reportscripts/.github/workflows/basic.yml@main
     with:
-      orgname: teamkfinteg
+      orgname: "teamkfinteg"
     secrets: 
       token: ${{ secrets.PRIVATE_REPO_TEST }}
